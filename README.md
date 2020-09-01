@@ -2,6 +2,8 @@
 
 Naive Javascript Miner for DigCoin on the EOS Main Network.
 
+[https://digcoin.network/](https://digcoin.network/)
+
 ## Installation
 
 NodeJS 13+
