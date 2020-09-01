@@ -23,6 +23,11 @@ if (!process.env['endpoint']) {
     process.env['endpoint'] = defaultEndpoint;
 }
 
+if (!process.env['account']) {
+    console.error(`Did not provide argument: '--account=<private_key>'`);
+    process.exit(1);
+}
+
 const rpc = new JsonRpc(process.env['endpoint'], { fetch });
 const signatureProvider = new JsSignatureProvider([process.env['wif']]);
 const api = new Api({
@@ -56,8 +61,8 @@ async function handleMiningAction() {
                     {
                         account: 'digcoinsmine',
                         name: 'mine',
-                        authorization: [{ actor: 'gi4dcnrugmge', permission: 'active' }],
-                        data: { miner: 'gi4dcnrugmge', symbol: '4,DIG' }
+                        authorization: [{ actor: process.env['account'], permission: 'active' }],
+                        data: { miner: process.env['account'], symbol: '4,DIG' }
                     }
                 ]
             },

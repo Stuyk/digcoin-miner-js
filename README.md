@@ -23,13 +23,13 @@ npm install
 **Start Mining**
 
 ```sh
-node ./index.js --wif=<private_key>
+node ./index.js --wif=<private_key> --account=<name>
 ```
 
 **Use a Special Endpoint**
 
 ```sh
-node ./index.js --wif=<private_key> --endpoint=<some_bp_endpoint>
+node ./index.js --wif=<private_key> --account=<name> --endpoint=<some_bp_endpoint>
 ```
 
 ## Why is the Key Exposed Locally?
