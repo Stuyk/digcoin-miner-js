@@ -41,7 +41,3 @@ It's very simple and this approach should not be used if you care about your key
 If you just want to try out mining, this doesn't require Python and all that noise.
 
 Review the source code before using this if you're unsure.
-
-```
-
-```
